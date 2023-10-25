@@ -1,0 +1,140 @@
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        width: 100%;
+        margin: 40px auto 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        @include media_from('sm') {
+            flex-direction: row;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    
+        @include media_from('md') {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    
+        @include media_from('lg') {
+            padding-left: 135px;
+            padding-right: 135px;
+        }
+
+        @include media_from('xl') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        @include media_from('3xl') {
+            margin: 60px auto 0 auto;
+        }
+
+        &__logo {
+            @include media_from('xl') {
+                margin-right: 50px;
+            }
+
+            @include media_from('2xl') {
+                margin-right: 100px;
+            }
+
+            a {
+                cursor: pointer;
+                svg {
+                    width: 152px;
+                    height: 64px;
+                    @include media_from('lg') {
+                        width: 216px;
+                        height: 90px;
+                    }
+                }
+            }
+        }
+
+        &__search {
+            display: none;
+
+            @include media_from('xl') {
+                display: block;
+                width: 400px;
+                height: 51px;
+                position: relative;
+                padding-right: 36px;
+                border-radius: 50px;
+                overflow: hidden;
+                background-color: $color-white;
+            }
+
+            @include media_from('2xl') {
+                width: 460px;
+            }
+
+            &.--bg-grey {
+                border: 1px solid #CCC;
+                background-color: $color-grey;
+            }
+
+            &__input {
+                width: 100%;
+                height: 51px;
+                outline: none;
+                background-color: transparent;
+                border: none;
+                padding: 16px 16px 15px 16px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.2;
+
+                &::placeholder {
+                    opacity: 0.4;
+                }
+            }
+            &__button {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+            }
+        }
+
+        &__tel {
+            align-self: flex-start;
+
+            @include media_from('sm') {
+                align-self: center;
+                margin-left: auto;
+            }
+
+            &__link {
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.2;
+                color: $color-white;
+
+                &:hover {
+                    color: $color-hover-link-white;
+                }
+
+                &.--color-black {
+                    color: $color-black;
+                }
+
+                &.--color-black:hover {
+                    color: $color-hover-link-black;
+                }
+            }
+        }
+    }
+}
