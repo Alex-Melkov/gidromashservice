@@ -1,4 +1,4 @@
-@import "mixins/media.scss";
+@import "./mixins/media.scss";
 @import "../components/btn/btn.scss";
 
 @import "fonts.scss";
@@ -8,3 +8,4 @@
 @import "modules/animation.scss";
 
 @import "../layout/header/header.scss";
+@import "../layout/footer/footer.scss";

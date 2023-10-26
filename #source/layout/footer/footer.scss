@@ -1,0 +1,197 @@
+.footer {
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $color-grey;
+
+    @include media_from('sm') {
+        height: 467px;
+    }
+
+    @include media_from('lg') {
+        height: 594px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include media_from('2xl') {
+        height: 231px;
+        padding-top: 42px;
+        padding-bottom: 55px;
+    }
+
+    &__container {
+        width: 100%;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        color: $color-black;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        @include media_from('sm') {
+            height: 347px;
+            padding-left: 50px;
+            padding-right: 50px;
+            align-items: center;
+        }
+
+        @include media_from('md') {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    
+        @include media_from('lg') {
+            height: 434px;
+            padding-left: 135px;
+            padding-right: 135px;
+        }
+
+        @include media_from('2xl') {
+            height: 134px;
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-direction: row;
+            align-items: normal;
+        }
+    
+        &__logo-and-confidential {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            order: 3;
+
+            @include media_from('sm') {
+                align-items: center;
+            }
+
+            @include media_from('2xl') {
+                width: 23%;
+                order: 1;
+                align-items: normal;
+            }
+
+            &__logo {
+                cursor: pointer;
+                svg {
+                    width: 152px;
+                    height: 64px;
+                    @include media_from('lg') {
+                        width: 220px;
+                        height: 92px;
+                    }
+                
+                    @include media_from('3xl') {
+                        width: 147px;
+                        height: 62px;
+                    }
+                }
+            }
+            &__copyright {
+                font-size: 0.7rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.2;
+                opacity: 0.8;
+            }
+
+            &__link {
+                font-size: 0.7rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.2;
+                text-decoration-line: underline;
+                text-underline-offset: 3px;
+                text-decoration-color: rgba(18, 18, 18, 0.8);
+                color: $color-black;
+                opacity: 0.8;
+
+                &:hover {
+                    color: $color-light-blue;
+                }
+            }
+        }
+
+        &__nav {
+            width: auto;
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 30px;
+            order: 1;
+
+            @include media_from('sm') {
+                justify-content: center;
+            }
+
+            @include media_from('2xl') {
+                width: 50%;
+                order: 2;
+                row-gap: 0;
+            }
+
+            @include media_from('3xl') {
+                width: 30%;
+            }
+
+            &__link {
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.2;
+                color: $color-black;
+
+                @include media_from('lg') {
+                    font-size: 1.2rem;
+                }
+
+                @include media_from('2xl') {
+                    font-size: 1rem;
+                }
+
+                @include media_from('3xl') {
+                    font-size: 0.75rem;
+                }
+
+                &:hover {
+                    color: $color-hover-link-black;
+                }
+            }
+        }
+
+        &__tel {
+            width: auto;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            order: 2;
+
+            @include media_from('2xl') {
+                width: 20%;
+                order: 3;
+                align-self: flex-start;
+            }
+
+            @include media_from('3xl') {
+                width: 15%;
+            }
+
+            &__link {
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.2;
+                color: $color-black;
+
+                @include media_from('md') {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
