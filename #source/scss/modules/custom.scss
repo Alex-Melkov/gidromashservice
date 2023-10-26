@@ -41,8 +41,8 @@ body {
     font-size: 1rem;
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
-    // background-color: $color-white;
-	background-color: $color-black;
+    background-color: $color-white;
+	// background-color: $color-black;
     // cursor: url(../img/cursor_white.png) 4 1, default;
     .footer-wrapper {
         margin-top: auto;
@@ -497,4 +497,13 @@ body.lock {
 .default-link {
 	cursor: pointer;
 	transition: all 0.3s ease;
+}
+
+.heading-h2 {
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $color-black;
 }

@@ -73,11 +73,11 @@
         }
 
         &.open &__icon-3 {
-            transform: rotate(60deg);
+            transform: rotate(-60deg);
         }
 
         &.open &__icon-4 {
-            transform: rotate(-60deg);
+            transform: rotate(60deg);
         }
     }
 }

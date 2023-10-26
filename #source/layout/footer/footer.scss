@@ -73,6 +73,11 @@
                 width: 23%;
                 order: 1;
                 align-items: normal;
+                gap: 10px;
+            }
+
+            @include media_from('3xl') {
+                gap: 12px;
             }
 
             &__logo {
@@ -85,7 +90,7 @@
                         height: 92px;
                     }
                 
-                    @include media_from('3xl') {
+                    @include media_from('2xl') {
                         width: 147px;
                         height: 62px;
                     }
