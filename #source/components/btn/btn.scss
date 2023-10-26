@@ -8,3 +8,42 @@
     border: none;
     padding: 0;
 }
+
+.btn-transparent {
+    width: 233px;
+    height: 52px;
+    border-radius: 20px;
+    border: 1px solid $color-white;
+    column-gap: 10px;
+    background-color: transparent;
+    font-size: 0.92rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $color-white;
+
+    @include media_from('lg') {
+        width: 341px;
+        height: 68px;
+    }
+
+    svg {
+        width: 31px;
+        height: 12px;
+        transition: all 0.3s ease;
+
+        @include media_from('lg') {
+            width: 42px;
+            height: 16px;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(252, 252, 252, 0.2);
+    }
+
+    &:hover svg {
+        transform: translateX(10px);
+    }
+
+}

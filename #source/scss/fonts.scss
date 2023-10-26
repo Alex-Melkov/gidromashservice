@@ -128,7 +128,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: local('Montserrat-Black'), local('Montserrat-Black'), 
+    src: local('Montserrat Black'), local('Montserrat-Black'), 
         url('../fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
@@ -140,4 +140,14 @@
         url('../fonts/Montserrat-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold'), local('Raleway-Bold'), 
+        url('../fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }

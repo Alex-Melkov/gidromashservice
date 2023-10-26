@@ -1,0 +1,185 @@
+.index-header {
+    width: 100%;
+    height: 100vh;
+    min-height: 812px;
+    position: relative;
+    overflow: hidden;
+
+    .index-background {
+        width: 100%;
+        height: 100vh;
+        min-height: 812px;
+        background-color: $color-white;
+        background-image: url("/img/index-header-bg-small.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        @include media_from('sm') {
+            background-image: url("/img/index-header-bg-mid.png");
+        }
+
+        @include media_from('2xl') {
+            background-image: url("/img/index-header-bg-big.png");
+        }
+    }
+
+    .index-background-text {
+        display: none;
+        position: absolute;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $color-white;
+        opacity: 0.08;
+        z-index: 2;
+
+        @include media_from('3xl') {
+            display: block;
+            font-size: 8.16rem;
+            left: 50%;
+            top: 35%;
+            transform: translateX(-50%) translateY(-35%);
+        }
+    
+        @media (min-width:2560px) {
+            font-size: 10.85rem;
+        }
+
+        &.--tablet {
+            display: block;
+            left: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 6rem;
+
+            @include media_from('sm') {
+                left: 10%;
+                font-size: 8.16rem;
+            }
+    
+            @include media_from('3xl') {
+                display: none;
+            }
+        }
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 812px;
+
+        &__content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 143px;
+
+            @include media_from('sm') {
+                padding-top: 150px;
+            }
+
+            @include media_from('sm') {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            @include media_from('md') {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        
+            @include media_from('lg') {
+                padding-left: 135px;
+                padding-right: 135px;
+            }
+    
+            @include media_from('xl') {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                left: 10px;
+                color: $color-white;
+
+                @include media_from('sm') {
+                    left: 50px;
+                }
+    
+                @include media_from('md') {
+                    left: 100px;
+                }
+            
+                @include media_from('lg') {
+                    left: 135px;
+                    row-gap: 40px;
+                }
+
+                @include media_from('xl') {
+                    left: 0;
+                }
+
+                &__title {
+                    display: none;
+                    font-size: 3rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1.2;
+                    margin: 0;
+
+                    @media (min-width: 385px) {
+                        font-size: 4rem;
+                    }
+
+                    @include media_from('lg') {
+                        font-size: 5.35rem;
+                    }
+
+                    @include media_from('xl') {
+                        display: block;
+                    }
+
+                    &.tablet {
+                        display: block;
+                        @include media_from('xl') {
+                            display: none;
+                        }
+                    }
+                }
+                &__text {
+                    width: 100%;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.2;
+
+                    @include media_from('sm') {
+                        width: 80%;
+                    }
+
+                    @include media_from('3xl') {
+                        width: 67%;
+                    }
+                }
+            }
+        }
+    }
+}

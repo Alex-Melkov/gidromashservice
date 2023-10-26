@@ -1,5 +1,4 @@
 @import "./mixins/media.scss";
-@import "../components/btn/btn.scss";
 
 @import "fonts.scss";
 @import "normalize.scss";
@@ -7,5 +6,10 @@
 @import "modules/custom.scss";
 @import "modules/animation.scss";
 
+@import "../components/btn/btn.scss";
 @import "../layout/header/header.scss";
 @import "../layout/footer/footer.scss";
+@import "../layout/menu/menu-sidebar.scss";
+@import "../layout/menu/menu-wrapper.scss";
+
+@import "../templates/index/index.scss";
