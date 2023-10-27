@@ -19,4 +19,19 @@ window.addEventListener('load', function () {
       }
     }
   });
+
+    //Инициализация свайпера Сотрудники
+    const index_about_swiper = new Swiper('.index-about-swiper', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.index-about-swiper-button-next',
+        prevEl: '.index-about-swiper-button-prev',
+      },
+      pagination: {
+        el: '.index-about-swiper-pagination',
+        clickable: true,
+      },
+    });
 });
