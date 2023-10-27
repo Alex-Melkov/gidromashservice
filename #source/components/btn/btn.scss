@@ -47,3 +47,36 @@
     }
 
 }
+
+.btn-light-blue {
+    width: 244px;
+    height: 52px;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: 20px;
+    background-color: $color-light-blue;
+    color: $color-white;
+    transition: all 0.3s ease;
+
+    @include media_from('lg') {
+       width: 305px;
+       height: 71px;
+       font-size: 1rem;
+    }
+
+    @include media_from('2xl') {
+        width: 326px;
+        height: 71px;
+        font-size: 0.75rem;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+}
