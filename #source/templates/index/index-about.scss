@@ -189,7 +189,6 @@
                 flex-direction: column-reverse;
                 align-items: center;
                 gap: 30px;
-                color: $color-black;
 
                 @include media_from('2xl') {
                     flex-direction: row;
