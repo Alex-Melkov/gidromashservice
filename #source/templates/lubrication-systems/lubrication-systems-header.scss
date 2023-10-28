@@ -1,0 +1,222 @@
+.lubrication-systems-header {
+    width: 100%;
+    height: 100vh;
+    min-height: 900px;
+    position: relative;
+
+    @media (min-width:390px) {
+        min-height: 844px;
+    }
+
+    .lubrication-systems-background {
+        width: 100%;
+        height: 100vh;
+        min-height: 900px;
+        background-color: $color-white;
+        background-image: url("/img/lubrication-systems-header-bg-small.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        @media (min-width:390px) {
+            min-height: 844px;
+        }
+
+        @include media_from('sm') {
+            background-image: url("/img/lubrication-systems-header-bg-mid.png");
+        }
+
+        @include media_from('2xl') {
+            background-image: url("/img/lubrication-systems-header-bg-big.png");
+        }
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        min-height: 812px;
+        z-index: 3;
+        margin-top: 220px;
+
+        @include media_from('sm') {
+            margin-top: 163px;
+        }
+
+        @include media_from('lg') {
+            margin-top: 190px;
+        }
+
+        @include media_from('3xl') {
+            margin-top: 250px;
+        }
+
+        &__content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            @include media_from('sm') {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            @include media_from('md') {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        
+            @include media_from('lg') {
+                padding-left: 135px;
+                padding-right: 135px;
+            }
+    
+            @include media_from('xl') {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .lubrication-systems-header-bread-crumbs {
+                position: absolute;
+                top: -100px;
+                left: 10px;
+                z-index: 5;
+
+                @include media_from('sm') {
+                    top: -50px;
+                    left: 50px;
+                }
+
+                @include media_from('md') {
+                    left: 100px;
+                }
+
+                @include media_from('lg') {
+                    top: -100px;
+                    left: 135px;
+                }
+
+                @include media_from('xl') {
+                    left: 0;
+                }
+        
+                @include media_from('3xl') {
+                    top: -140px;
+                }
+            }
+
+            &__wrapper {
+                width: 94%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                position: absolute;
+                top: 0;
+                left: 10px;
+                color: $color-white;
+
+                @include media_from('sm') {
+                    left: 50px;
+                    width: 80%;
+                    top: 10%;
+                    transform: translateY(-10%);
+                }
+    
+                @include media_from('md') {
+                    left: 100px;
+                }
+            
+                @include media_from('lg') {
+                    width: 66%;
+                    left: 135px;
+                    row-gap: 40px;
+                }
+
+                @include media_from('xl') {
+                    left: 0;
+                }
+
+                &__header {
+                    &__title {
+                        font-size: 2rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        text-transform: uppercase;
+                        margin: 0;
+                        margin-bottom: 15px;
+
+                        @include media_from('lg') {
+                            margin-bottom: 30px;
+                            font-size: 2.92rem;
+                        }
+        
+                        @include media_from('3xl') {
+                            margin-bottom: 40px;
+                        }
+                    }
+                    &__text {
+                        font-size: 0.875rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.2;
+
+                        @include media_from('lg') {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                &__description-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    @include media_from('lg') {
+                       gap: 20px;
+                    }
+    
+                    @include media_from('3xl') {
+                        gap: 25px;
+                    }
+                    &__item {
+                        position: relative;
+                        list-style: none;
+                        font-size: 0.75rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.2;
+                        padding-left: 20px;
+
+                        @include media_from('lg') {
+                            padding-left: 22px;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            top: 5px;
+                            left: 0;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: $color-light-blue;
+
+                            @include media_from('lg') {
+                                top: 5px;
+                                left: 0;
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

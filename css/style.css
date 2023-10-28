@@ -1071,6 +1071,67 @@ main {
   }
 }
 
+.bread-crumbs {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 991px) {
+  .bread-crumbs {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .bread-crumbs {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.bread-crumbs__list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  color: #FCFCFC;
+  list-style: none;
+}
+@media only screen and (min-width: 991px) {
+  .bread-crumbs__list {
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+}
+.bread-crumbs__list__elem a {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FCFCFC;
+}
+@media only screen and (min-width: 576px) {
+  .bread-crumbs__list__elem a {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .bread-crumbs__list__elem a {
+    font-size: 16px;
+  }
+}
+.bread-crumbs__list__elem.active-crumbs {
+  opacity: 0.6;
+}
+.bread-crumbs__list__elem.active-crumbs a {
+  cursor: default;
+}
+.bread-crumbs__list__delimiter {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #FCFCFC;
+}
+
 .header {
   width: 100%;
   position: absolute;
@@ -1084,7 +1145,7 @@ main {
   justify-content: space-between;
   width: 100%;
   height: 103px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1108,6 +1169,7 @@ main {
     padding-left: 135px;
     padding-right: 135px;
     height: 90px;
+    margin: 40px auto 0 auto;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1730,87 +1792,6 @@ main {
   color: #8b8b8b;
 }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-.btn-transparent {
-  width: 233px;
-  height: 52px;
-  border-radius: 20px;
-  border: 1px solid #FCFCFC;
-  column-gap: 10px;
-  background-color: transparent;
-  font-size: 0.92rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #FCFCFC;
-}
-@media only screen and (min-width: 991px) {
-  .btn-transparent {
-    width: 341px;
-    height: 68px;
-  }
-}
-.btn-transparent svg {
-  width: 31px;
-  height: 12px;
-  transition: all 0.3s ease;
-}
-@media only screen and (min-width: 991px) {
-  .btn-transparent svg {
-    width: 42px;
-    height: 16px;
-  }
-}
-.btn-transparent:hover {
-  background-color: rgba(252, 252, 252, 0.2);
-}
-.btn-transparent:hover svg {
-  transform: translateX(10px);
-}
-
-.btn-light-blue {
-  width: 244px;
-  height: 52px;
-  font-size: 0.85rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2;
-  border-radius: 20px;
-  background-color: #00A0E3;
-  color: #FCFCFC;
-  transition: all 0.3s ease;
-}
-@media only screen and (min-width: 991px) {
-  .btn-light-blue {
-    width: 305px;
-    height: 71px;
-    font-size: 1rem;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .btn-light-blue {
-    width: 326px;
-    height: 71px;
-    font-size: 0.75rem;
-  }
-}
-.btn-light-blue:hover {
-  opacity: 0.8;
-}
-.btn-light-blue:active {
-  opacity: 0.4;
-}
-
 .index-header {
   width: 100%;
   height: 100vh;
@@ -1854,8 +1835,8 @@ main {
     display: block;
     font-size: 8.16rem;
     left: 50%;
-    top: 35%;
-    transform: translateX(-50%) translateY(-35%);
+    top: 25%;
+    transform: translateX(-50%) translateY(-25%);
   }
 }
 @media (min-width: 2560px) {
@@ -1866,14 +1847,16 @@ main {
 .index-header .index-background-text.--tablet {
   display: block;
   left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20%;
+  transform: translateY(-20%);
   font-size: 6rem;
 }
 @media only screen and (min-width: 576px) {
   .index-header .index-background-text.--tablet {
     left: 10%;
     font-size: 8.16rem;
+    top: 30%;
+    transform: translateY(-30%);
   }
 }
 @media only screen and (min-width: 1921px) {
@@ -1889,6 +1872,17 @@ main {
   height: 100vh;
   min-height: 812px;
   z-index: 3;
+  margin-top: 143px;
+}
+@media only screen and (min-width: 991px) {
+  .index-header__container {
+    margin-top: 150px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .index-header__container {
+    margin-top: 170px;
+  }
 }
 .index-header__container__content {
   position: relative;
@@ -1897,12 +1891,6 @@ main {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 143px;
-}
-@media only screen and (min-width: 576px) {
-  .index-header__container__content {
-    padding-top: 150px;
-  }
 }
 @media only screen and (min-width: 576px) {
   .index-header__container__content {
@@ -1933,14 +1921,15 @@ main {
   flex-direction: column;
   row-gap: 30px;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 10px;
-  transform: translateY(-50%);
   color: #FCFCFC;
 }
 @media only screen and (min-width: 576px) {
   .index-header__container__content__wrapper {
     left: 50px;
+    top: 30%;
+    transform: translateY(-30%);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3015,5 +3004,245 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.lubrication-systems-header {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  position: relative;
+}
+@media (min-width: 390px) {
+  .lubrication-systems-header {
+    min-height: 844px;
+  }
+}
+.lubrication-systems-header .lubrication-systems-background {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  background-color: #FCFCFC;
+  background-image: url("/img/lubrication-systems-header-bg-small.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@media (min-width: 390px) {
+  .lubrication-systems-header .lubrication-systems-background {
+    min-height: 844px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .lubrication-systems-header .lubrication-systems-background {
+    background-image: url("/img/lubrication-systems-header-bg-mid.png");
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .lubrication-systems-header .lubrication-systems-background {
+    background-image: url("/img/lubrication-systems-header-bg-big.png");
+  }
+}
+.lubrication-systems-header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 812px;
+  z-index: 3;
+  margin-top: 220px;
+}
+@media only screen and (min-width: 576px) {
+  .lubrication-systems-header__container {
+    margin-top: 163px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container {
+    margin-top: 190px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .lubrication-systems-header__container {
+    margin-top: 250px;
+  }
+}
+.lubrication-systems-header__container__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 576px) {
+  .lubrication-systems-header__container__content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .lubrication-systems-header__container__content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content {
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .lubrication-systems-header__container__content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  z-index: 5;
+}
+@media only screen and (min-width: 576px) {
+  .lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+    top: -50px;
+    left: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+    left: 100px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+    top: -100px;
+    left: 135px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .lubrication-systems-header__container__content .lubrication-systems-header-bread-crumbs {
+    top: -140px;
+  }
+}
+.lubrication-systems-header__container__content__wrapper {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: #FCFCFC;
+}
+@media only screen and (min-width: 576px) {
+  .lubrication-systems-header__container__content__wrapper {
+    left: 50px;
+    width: 80%;
+    top: 10%;
+    transform: translateY(-10%);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .lubrication-systems-header__container__content__wrapper {
+    left: 100px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper {
+    width: 66%;
+    left: 135px;
+    row-gap: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .lubrication-systems-header__container__content__wrapper {
+    left: 0;
+  }
+}
+.lubrication-systems-header__container__content__wrapper__header__title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper__header__title {
+    margin-bottom: 30px;
+    font-size: 2.92rem;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .lubrication-systems-header__container__content__wrapper__header__title {
+    margin-bottom: 40px;
+  }
+}
+.lubrication-systems-header__container__content__wrapper__header__text {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper__header__text {
+    font-size: 1rem;
+  }
+}
+.lubrication-systems-header__container__content__wrapper__description-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper__description-list {
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .lubrication-systems-header__container__content__wrapper__description-list {
+    gap: 25px;
+  }
+}
+.lubrication-systems-header__container__content__wrapper__description-list__item {
+  position: relative;
+  list-style: none;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 20px;
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper__description-list__item {
+    padding-left: 22px;
+  }
+}
+.lubrication-systems-header__container__content__wrapper__description-list__item::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00A0E3;
+}
+@media only screen and (min-width: 991px) {
+  .lubrication-systems-header__container__content__wrapper__description-list__item::before {
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
