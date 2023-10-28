@@ -113,12 +113,6 @@
             min-width: 202px;
             height: 234px;
         }
-
-        @include media_from('3xl') {
-            width: 202px;
-            min-width: 202px;
-            height: 234px;
-        }
         img {
             width: 100%;
             height: 100%;

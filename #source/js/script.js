@@ -20,18 +20,46 @@ window.addEventListener('load', function () {
     }
   });
 
-    //Инициализация свайпера Сотрудники
-    const index_about_swiper = new Swiper('.index-about-swiper', {
-      direction: 'horizontal',
-      slidesPerView: 1,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: '.index-about-swiper-button-next',
-        prevEl: '.index-about-swiper-button-prev',
+  //Инициализация свайпера Сотрудники
+  const index_about_swiper = new Swiper('.index-about-swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.index-about-swiper-button-next',
+      prevEl: '.index-about-swiper-button-prev',
+    },
+    pagination: {
+      el: '.index-about-swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  //Инициализация свайпера Партнёры
+  const partners_swiper = new Swiper('.partners-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1,
       },
-      pagination: {
-        el: '.index-about-swiper-pagination',
-        clickable: true,
+      576: {
+        spaceBetween: 10,
+        slidesPerView: 2,
       },
-    });
+      991: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+      1920: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      },
+    },
+    navigation: {
+      nextEl: '.partners-swiper-button-next',
+      prevEl: '.partners-swiper-button-prev',
+    },
+  });
 });

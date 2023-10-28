@@ -1,0 +1,133 @@
+.partners-swiper-wrapper {
+    position: relative;
+    width: 100%;
+    .partners-swiper {
+        position: static;
+        width: 80%;
+        height: min-content;
+    
+        @include media_from('lg') {
+            width: 85%;
+        }
+    
+        @include media_from('2xl') {
+            width: 90%;
+        }
+    
+        .partners-swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            .partners-swiper-slide {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: grab;
+                .slide-content {
+                    max-width: 397px;
+                    max-height: 134px;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.partners-swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 50;
+
+    @include media_from('sm') {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include media_from('2xl') {
+        width: 60px;
+        height: 60px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: default;
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+
+        @include media_from('sm') {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include media_from('2xl') {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+.partners-swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 50;
+
+    @include media_from('sm') {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include media_from('2xl') {
+        width: 60px;
+        height: 60px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: default;
+    }
+    
+    svg {
+        width: 28px;
+        height: 28px;
+
+        @include media_from('sm') {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include media_from('2xl') {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
