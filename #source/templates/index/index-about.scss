@@ -3,7 +3,6 @@
     padding-top: 80px;
     padding-bottom: 50px;
     position: relative;
-    overflow: hidden;
 
     @include media_from('lg') {
 		padding-top: 100px;
@@ -14,6 +13,20 @@
 		padding-top: 120px;
         padding-bottom: 100px;
 	}
+    //Шестеренки
+    .gear-wheel-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    .gear-wheel-2 {
+        position: absolute;
+        top: 152px;
+        left: -312px;
+        z-index: -1;
+    }
     &__container {
         width: 100%;
         margin: 0 auto;
@@ -35,7 +48,7 @@
             padding-right: 135px;
         }
 
-        @include media_from('2xl') {
+        @include media_from('xl') {
             padding-left: 0px;
             padding-right: 0px;
         }
@@ -436,20 +449,4 @@
             background-color: $color-light-blue;
         }
     }
-}
-
-//Шестеренки
-
-.gear-wheel-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.gear-wheel-2 {
-    position: absolute;
-    top: 152px;
-    left: -312px;
-    z-index: -1;
 }

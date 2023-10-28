@@ -1,0 +1,260 @@
+.index-contacts {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+
+    @include media_from('lg') {
+		padding-top: 80px;
+        padding-bottom: 100px;
+	}
+
+	@include media_from('3xl') {
+		padding-top: 100px;
+        padding-bottom: 120px;
+	}
+    //Шестеренка
+    .gear-wheel-1 {
+        position: absolute;
+        top: -300px;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        @include media_from('sm') {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        @include media_from('md') {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    
+        @include media_from('xl') {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        @include media_from('3xl') {
+            max-width: 1546px;
+        }
+
+        &__header {
+            text-align: center;
+            margin-bottom: 40px;
+
+            @include media_from('lg') {
+                margin-bottom: 60px;
+            }
+        }
+
+        &__content {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @include media_from('lg') {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 33px;
+                background-color: $color-grey;
+                border-radius: 30px;
+            }
+    
+            @include media_from('2xl') {
+                padding: 80px 67px;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 30px;
+                @include media_from('lg') {
+                    width: 35%;
+                    gap: 40px;
+                }
+        
+                @include media_from('2xl') {
+                    gap: 40px;
+                }
+                &__adress {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include media_from('lg') {
+                        gap: 15px;
+                    }
+            
+                    @include media_from('2xl') {
+                        gap: 20px;
+                    }
+                    &__title {
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        text-transform: uppercase;
+                        opacity: 0.7;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 1rem;
+                        }
+                    }
+                    &__location {
+                        font-size: 0.85rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.05rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 0.85rem;
+                        }
+                    }
+                    &__time {
+                        font-size: 0.75rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        opacity: 0.8;
+
+                        @media (min-width: 390px) {
+                            font-size: 0.95rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+
+                &__phone-numbers {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include media_from('lg') {
+                        gap: 15px;
+                    }
+            
+                    @include media_from('2xl') {
+                        gap: 20px;
+                    }
+                    &__title {
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        text-transform: uppercase;
+                        opacity: 0.7;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 1rem;
+                        }
+                    }
+                    &__tel {
+                        font-size: 0.92rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.2;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.12rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 0.92rem;
+                        }
+                    }
+                }
+
+                &__email-block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include media_from('lg') {
+                        gap: 15px;
+                    }
+            
+                    @include media_from('2xl') {
+                        gap: 20px;
+                    }
+                    &__title {
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        text-transform: uppercase;
+                        opacity: 0.7;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 1rem;
+                        }
+                    }
+                    &__email {
+                        font-size: 0.92rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.2;
+
+                        @media (min-width: 390px) {
+                            font-size: 1.12rem;
+                        }
+
+                        @include media_from('lg') {
+                            font-size: 0.92rem;
+                        }
+                    }
+                }
+            }
+
+            &__map {
+                width: 100%;
+                height: 500px;
+
+                @include media_from('sm') {
+                    height: 407px;
+                }
+
+                @include media_from('lg') {
+                    width: 58%;
+                }
+        
+                @include media_from('2xl') {
+                    height: 469px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
