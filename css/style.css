@@ -4193,4 +4193,169 @@ main {
     height: 40px;
   }
 }
+
+.restaurant-systems-main {
+  width: 100%;
+  padding-bottom: 50px;
+  position: relative;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .restaurant-systems-main {
+    padding-bottom: 100px;
+  }
+}
+.restaurant-systems-main .gear-wheel-1 {
+  position: absolute;
+  top: -120px;
+  right: 0;
+  z-index: -1;
+}
+.restaurant-systems-main__container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 576px) {
+  .restaurant-systems-main__container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurant-systems-main__container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container {
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurant-systems-main__container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.restaurant-systems-main__container .restaurant-systems-main-bread-crumbs {
+  margin-top: 123px;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container .restaurant-systems-main-bread-crumbs {
+    margin-top: 130px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .restaurant-systems-main__container .restaurant-systems-main-bread-crumbs {
+    margin-top: 150px;
+  }
+}
+.restaurant-systems-main__container__wrapper__header {
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container__wrapper__header {
+    margin-bottom: 60px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content {
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container__wrapper__content {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .restaurant-systems-main__container__wrapper__content {
+    margin-bottom: 80px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content__top-block {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container__wrapper__content__top-block {
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurant-systems-main__container__wrapper__content__top-block {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .restaurant-systems-main__container__wrapper__content__top-block {
+    margin-bottom: 30px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content__top-block__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media only screen and (min-width: 991px) {
+  .restaurant-systems-main__container__wrapper__content__top-block__info {
+    gap: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurant-systems-main__container__wrapper__content__top-block__info {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .restaurant-systems-main__container__wrapper__content__top-block__info {
+    gap: 20px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content__top-block__info__text {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.restaurant-systems-main__container__wrapper__content__top-block__image {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .restaurant-systems-main__container__wrapper__content__top-block__image {
+    width: 50%;
+    height: 541px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content__top-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant-systems-main__container__wrapper__content__bottom-block {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .restaurant-systems-main__container__wrapper__content__bottom-block {
+    height: 503px;
+  }
+}
+.restaurant-systems-main__container__wrapper__content__bottom-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant-systems-main__container__wrapper__button {
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
