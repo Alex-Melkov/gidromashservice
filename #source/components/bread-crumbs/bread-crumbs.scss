@@ -38,6 +38,10 @@
                 @include media_from('lg') {
                     font-size: 16px;
                 }
+
+                &.--color-black {
+                    color: $color-black;
+                }
             }
     
             &.active-crumbs {
@@ -46,6 +50,7 @@
                     cursor: default;
                 }
             }
+
         }
         &__delimiter {
             width: 3px;
@@ -53,6 +58,10 @@
             height: 3px;
             border-radius: 50%;
             background-color: $color-white;
+
+            &.--color-black {
+                background-color: $color-black;
+            }
         }
     }
 }
