@@ -20,6 +20,14 @@ window.addEventListener('load', function () {
     }
   });
 
+  //Скрипт открытия/закрытия каталог-селекта
+  const catalogSelect = document.querySelector('.catalog-select');
+  const catalogSelectItem = document.querySelector('.catalog-select__default');
+
+  catalogSelectItem.addEventListener('click', function (e) {
+    catalogSelect.classList.toggle('open-select');
+  });
+
   //Инициализация свайпера Сотрудники
   const index_about_swiper = new Swiper('.index-about-swiper', {
     direction: 'horizontal',

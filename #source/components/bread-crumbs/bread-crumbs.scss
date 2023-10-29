@@ -1,15 +1,11 @@
 .bread-crumbs {
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
 
     @include media_from('lg') {
         padding-top: 60px;
         padding-bottom: 60px;
-    }
-
-    @include media_from('3xl') {
-        padding-top: 80px;
-        padding-bottom: 80px;
     }
 
     &__list {
@@ -33,6 +29,7 @@
                 font-weight: 500;
                 line-height: 1.2;
                 color: $color-white;
+                white-space: nowrap;
     
                 @include media_from('sm') {
                     font-size: 14px;
@@ -52,6 +49,7 @@
         }
         &__delimiter {
             width: 3px;
+            min-width: 3px;
             height: 3px;
             border-radius: 50%;
             background-color: $color-white;

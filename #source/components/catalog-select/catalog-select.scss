@@ -1,0 +1,141 @@
+.catalog-select {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $color-light-blue;
+    border-radius: 20px;
+
+    @media (min-width: 390px) {
+        max-width: 280px;
+    }
+
+    @include media_from('sm') {
+        max-width: 380px;
+    }
+
+    @include media_from('xl') {
+        max-width: 600px;
+        min-width: 500px;
+    }
+
+    @include media_from('2xl') {
+        width: 600px;
+    }
+
+    &.open-select {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        .catalog-select__list {
+            display: block;
+        }
+
+        .catalog-select__default {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .catalog-select__default {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        cursor: pointer;
+        @include media_from('sm') {
+            justify-content: center;
+            align-items: center;
+        }
+    
+        @include media_from('lg') {
+            
+        }
+
+        span {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.2;
+            padding: 14px 20px 14px 20px;
+            color: $color-white;
+
+            @include media_from('xl') {
+                font-size: 18px;
+                padding: 16px 16px 15px 16px;
+            }
+        
+            @include media_from('3xl') {
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 12px;
+            height: 9px;
+
+            @include media_from('xl') {
+                top: 18px;
+                right: 30px;
+                width: 13px;
+                height: 12px;
+            }
+        }
+    }
+    .catalog-select__list {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $color-light-blue;
+        z-index: 2;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .catalog-select__list__item {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            cursor: pointer;
+            border-top: 1px solid rgba(252, 252, 252, 0.2);
+            background-color: $color-light-blue;
+            @include media_from('sm') {
+                justify-content: center;
+                align-items: center;
+            }
+        
+            @include media_from('3xl') {
+            }
+
+            span {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.2;
+                padding: 14px 20px 14px 20px;
+                color: $color-white;
+
+                @include media_from('xl') {
+                    font-size: 18px;
+                    padding: 16px 16px 15px 16px;
+                }
+            
+                @include media_from('3xl') {
+                }
+            }
+
+            &:hover {
+                background-color: #63cdfa;
+            }
+
+            &:last-of-type {
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+    }
+}
