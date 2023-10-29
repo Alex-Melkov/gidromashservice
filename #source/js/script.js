@@ -62,7 +62,7 @@ window.addEventListener('load', function () {
         spaceBetween: 30,
         slidesPerView: 3,
       },
-      1920: {
+      1921: {
         spaceBetween: 30,
         slidesPerView: 4,
       },
@@ -70,6 +70,46 @@ window.addEventListener('load', function () {
     navigation: {
       nextEl: '.partners-swiper-button-next',
       prevEl: '.partners-swiper-button-prev',
+    },
+  });
+
+  //Инициализация свайпера Смотрите также
+  const product_bottom_swiper = new Swiper('.product-bottom-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      390: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      576: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      768: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      991: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+      },
+      1440: {
+        spaceBetween: 20,
+        slidesPerView: 6,
+      },
+      1921: {
+        spaceBetween: 20,
+        slidesPerView: 8,
+      },
+    },
+    navigation: {
+      nextEl: '.product-bottom-swiper-button-next',
+      prevEl: '.product-bottom-swiper-button-prev',
     },
   });
 });
