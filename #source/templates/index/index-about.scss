@@ -264,21 +264,17 @@
                 &__image {
                     width: 100%;
                     max-width: 200px;
-                    max-height: 230px;
 
                     @media (min-width: 390px) {
                         max-width: 234px;
-                        max-height: 260px;
                     }
 
                     @include media_from('sm') {
                         max-width: 350px;
-                        max-height: 390px;
                     }
 
                     @include media_from('lg') {
-                        max-width: 442px;
-                        max-height: 492px;
+                        max-width: 442px
                     }
 
                     @include media_from('2xl') {

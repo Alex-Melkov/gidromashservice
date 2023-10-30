@@ -68,7 +68,6 @@
             &__content {
                 &__logo {
                     max-width: 443px;
-                    max-height: 92px;
                     margin-bottom: 40px;
 
                     @include media_from('lg') {

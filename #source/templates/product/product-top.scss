@@ -107,17 +107,14 @@
                     &__image {
                         width: 194px;
                         min-width: 194px;
-                        height: 225px;
 
                         @media (min-width: 390px) {
                             width: 350px;
                             min-width: 350px;
-                            height: 450px;
                         }
                         @include media_from('sm') {
                             width: 448px;
                             min-width: 448px;
-                            height: 520px;
                         }
 
                         img {
