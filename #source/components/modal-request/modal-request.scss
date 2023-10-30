@@ -1,0 +1,257 @@
+.fancybox__container {
+    .fancybox__carousel {
+        cursor: default;
+        .fancybox__slide  {
+            cursor: default;
+            padding: 20px;
+
+            @media (min-width:390px) {
+                padding: 30px
+            }
+
+            @include media_from('md') {
+                padding: 40px;
+            }
+
+            .fancybox__content {
+                width: 100%;
+                max-width: 838px;
+                padding: 30px 20px;
+                background-color: $color-light-blue;
+                border-radius: 20px;
+                cursor: default;
+
+                @media (min-width:390px) {
+                    padding: 60px 30px
+                }
+
+                @include media_from('lg') {
+                    padding: 80px 60px;
+                }
+
+                .modal-request {
+                    color: $color-white;
+                    &__header {
+                        font-size: 1.5rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        margin-bottom: 40px;
+
+                        @include media_from('lg') {
+                            margin-bottom: 60px;
+                            font-size: 1.7rem;
+                        }
+
+                        @include media_from('3xl') {
+                            margin-bottom: 80px;
+                        }
+                    }
+                    &__form {
+                        &__data-block {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            margin-bottom: 15px;
+
+                            @include media_from('sm') {
+                                flex-direction: row;
+                            }
+
+                            @include media_from('lg') {
+                                gap: 20px;
+                                margin-bottom: 20px;
+                            }
+
+                            @include media_from('3xl') {
+                                margin-bottom: 30px;
+                                gap: 30px;
+                            }
+                            &__name {
+                                width: 100%;
+
+                                input {
+                                    width: 100%;
+                                    border-radius: 100px;
+                                    outline: none;
+                                    border: 1px solid $color-white;
+                                    background-color: $color-light-blue;
+                                    color: $color-white;
+                                    font-size: 0.7rem;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 1.2;
+                                    padding: 10px 6px;
+    
+                                    @include media_from('lg') {
+                                        padding: 12px 8px;
+                                    }
+
+                                    @include media_from('2xl') {
+                                        padding: 16px 12px;
+                                    }
+
+                                    &::placeholder {
+                                        color: $color-white;
+                                    }
+                                }
+                            }
+                            &__tel {
+                                width: 100%;
+
+                                input {
+                                    width: 100%;
+                                    border-radius: 100px;
+                                    outline: none;
+                                    border: 1px solid $color-white;
+                                    background-color: $color-light-blue;
+                                    color: $color-white;
+                                    font-size: 0.7rem;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 1.2;
+                                    padding: 10px 6px;
+
+                                    @include media_from('lg') {
+                                        padding: 12px 8px;
+                                    }
+    
+                                    @include media_from('2xl') {
+                                        padding: 16px 12px;
+                                    }
+
+                                    &::placeholder {
+                                        color: $color-white;
+                                    }
+                                }
+                            }
+                        }
+
+                        &__comment {
+                            width: 100%;
+                            margin-bottom: 15px;
+                            @include media_from('lg') {
+                                margin-bottom: 20px;
+                            }
+
+                            @include media_from('3xl') {
+                                margin-bottom: 25px;
+                            }
+
+                            input {
+                                width: 100%;
+                                border-radius: 100px;
+                                outline: none;
+                                border: 1px solid $color-white;
+                                background-color: $color-light-blue;
+                                color: $color-white;
+                                font-size: 0.7rem;
+                                font-style: normal;
+                                font-weight: 500;
+                                padding: 10px 6px;
+
+                                @include media_from('lg') {
+                                    padding: 12px 8px;
+                                }
+
+                                @include media_from('2xl') {
+                                    padding: 16px 12px;
+                                }
+
+                                &::placeholder {
+                                    color: $color-white;
+                                }
+                                
+                            }
+                        }
+
+                        &__confidicial {
+                            margin-bottom: 20px;
+                            @include media_from('lg') {
+                                margin-bottom: 40px;
+                            }
+
+                            @include media_from('3xl') {
+                                margin-bottom: 60px;
+                            }
+                            &__wrapper {
+                                display: inline-flex;
+                                align-items: center;
+                                position: relative;
+                                cursor: pointer;
+
+                                input {
+                                    visibility: hidden;
+                                    position: absolute;
+                                    top: 0;
+                                    left: -20px;
+                                    transform: scale(0);
+                                }
+
+                                input:checked + .modal-request__form__confidicial__wrapper__checkbox::before {
+                                    display: block;
+                                }
+
+                                &__checkbox {
+                                    width: 14px;
+                                    min-width: 14px;
+                                    height: 14px;
+                                    border-radius: 50%;
+                                    background-color: $color-white;
+                                    margin-right: 10px;
+                                    position: relative;
+
+                                    &::before {
+                                        display: none;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        content: '';
+                                        width: 7px;
+                                        height: 7px;
+                                        border-radius: 50%;
+                                        background-color: $color-black;
+                                    }
+                                }
+
+                                &__text {
+                                    color: $color-white;
+                                    font-size: 0.7rem;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        &__button {
+                            width: 150px;
+                            height: 41px;
+                            font-size: 0.75rem;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 1.2;
+                            color: $color-light-blue;
+                            background-color: $color-white;
+                            border-radius: 20px;
+
+                            @include media_from('lg') {
+                                width: 200px;
+                                height: 61px;
+                            }
+
+                            @include media_from('3xl') {
+                                width: 251px;
+                                height: 71px;
+                            }
+
+                            &:hover {
+                                background-color: $color-hover-link-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
