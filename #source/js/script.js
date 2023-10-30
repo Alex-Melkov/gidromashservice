@@ -112,4 +112,32 @@ window.addEventListener('load', function () {
       prevEl: '.product-bottom-swiper-button-prev',
     },
   });
+
+  //Инициализация свайпера Другие статьи
+  const article_bottom_swiper = new Swiper('.article-bottom-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      576: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1921: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      },
+    },
+    navigation: {
+      nextEl: '.article-bottom-swiper-button-next',
+      prevEl: '.article-bottom-swiper-button-prev',
+    },
+  });
 });
