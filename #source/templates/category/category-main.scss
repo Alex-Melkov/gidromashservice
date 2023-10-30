@@ -193,17 +193,14 @@
                         align-self: normal;
                         width: 450px;
                         min-width: 450px;
-                        height: 650px;
                     }
                     @include media_from('2xl') {
                         width: 500px;
                         min-width: 500px;
-                        height: 600px;
                     }
                     @include media_from('3xl') {
                         width: 600px;
                         min-width: 600px;
-                        height: 600px;
                     }
                     img {
                         width: 100%;
