@@ -25,20 +25,9 @@
                 align-items: center;
                 cursor: grab;
                 .slide-content {
-                    max-width: 397px;
-                    height: 60px;
-    
-                    @media (min-width: 390px) {
-                        height: 74px;
-                    }
-
-                    @include media_from('2xl') {
-                        height: 134px;
-                    }
                     img {
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
                     }
                 }
             }

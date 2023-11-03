@@ -50,6 +50,14 @@
             padding-right: 0px;
         }
 
+        @include media_from('3xl') {
+            padding-left: 100px;
+        }
+
+        @media (min-width:2100px) {
+            padding-left: 0;
+        }
+
         &__header {
             position: relative;
             display: flex;
@@ -168,7 +176,7 @@
                     color: $color-black;
     
                     &:hover {
-                        color: $color-hover-link-black;
+                        color: $color-light-blue;
                     }
                 }
             }
@@ -196,16 +204,8 @@
                     font-size: 1.2rem;
                 }
 
-                &.--small-link {
-                    font-size: 0.8rem;
-
-                    @include media_from('sm') {
-                        font-size: 1rem;
-                    }
-                }
-
                 &:hover {
-                    color: $color-hover-link-black;
+                    color: $color-light-blue;
                 }
             }
         }

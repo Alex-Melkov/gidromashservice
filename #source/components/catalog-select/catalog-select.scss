@@ -1,9 +1,12 @@
-.catalog-select {
+.select2.select2-container.select2-container--default {
     position: relative;
+    overflow: hidden;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     background-color: $color-light-blue;
     border-radius: 20px;
+    border: none;
 
     @media (min-width: 390px) {
         max-width: 280px;
@@ -13,129 +16,141 @@
         max-width: 380px;
     }
 
-    @include media_from('xl') {
+    @include media_from('md') {
         max-width: 600px;
-        min-width: 500px;
+        min-width: 520px;
     }
 
     @include media_from('2xl') {
         width: 600px;
     }
-
-    &.open-select {
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        .catalog-select__list {
-            display: block;
-        }
-
-        .catalog-select__default {
-            svg {
-                transform: rotate(180deg);
-            }
-        }
-    }
-
-    .catalog-select__default {
+    .selection {
         width: 100%;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        cursor: pointer;
-        @include media_from('sm') {
-            justify-content: center;
-            align-items: center;
-        }
-    
-        @include media_from('lg') {
-            
-        }
-
-        span {
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.2;
-            padding: 14px 20px 14px 20px;
-            color: $color-white;
-
-            @include media_from('xl') {
-                font-size: 18px;
-                padding: 16px 16px 15px 16px;
-            }
-        
-            @include media_from('3xl') {
-            }
-        }
-
-        svg {
-            position: absolute;
-            top: 16px;
-            right: 20px;
-            width: 12px;
-            height: 9px;
-
-            @include media_from('xl') {
-                top: 18px;
-                right: 30px;
-                width: 13px;
-                height: 12px;
-            }
-        }
-    }
-    .catalog-select__list {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: $color-light-blue;
-        z-index: 2;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-
-        .catalog-select__list__item {
-            list-style: none;
+        height: 100%;
+        border: none;
+        .select2-selection.select2-selection--single {
             width: 100%;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            cursor: pointer;
-            border-top: 1px solid rgba(252, 252, 252, 0.2);
-            background-color: $color-light-blue;
-            @include media_from('sm') {
-                justify-content: center;
-                align-items: center;
-            }
-        
-            @include media_from('3xl') {
-            }
-
-            span {
+            height: 100%;
+            border: none;
+            .select2-selection__rendered {
+                white-space: normal;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                font-family: 'Montserrat';
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 1.2;
-                padding: 14px 20px 14px 20px;
+                padding: 14px 30px 14px 25px;
                 color: $color-white;
+                background-color: $color-light-blue;
 
-                @include media_from('xl') {
+                @include media_from('md') {
                     font-size: 18px;
-                    padding: 16px 16px 15px 16px;
+                    padding: 14px 30px 15px 25px;
                 }
-            
-                @include media_from('3xl') {
+
+                .select2-selection__placeholder {
+                    white-space: pre-line;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    font-family: 'Montserrat';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    padding: 14px 30px 14px 25px;
+                    color: $color-white;
+                    background-color: $color-light-blue;
+    
+                    @include media_from('md') {
+                        font-size: 18px;
+                        padding: 14px 30px 15px 25px;
+                    }
+                }
+
+                .select2-selection__clear {
+                    display: none;
                 }
             }
 
-            &:hover {
-                background-color: #63cdfa;
-            }
+            .select2-selection__arrow {
+                position: absolute;
+                display: block;
+                right: 12px;
+                top: 40%;
+                width: 10px;
+                height: 10px;
+                background-image: url("/img/catalog-select-arrow.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
 
-            &:last-of-type {
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
+                @include media_from('md') {
+                    width: 13px;
+                    height: 13px;
+                    top: 35%;
+                    right: 16px;
+                }
+
+                b {
+                    display: none;
+                }   
             }
         }
+    }
+}
+
+//Открытый список option
+.select2-container.select2-container--default.select2-container--open {
+    .select2-dropdown.select2-dropdown--below {
+        border: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+        background-color: $color-light-blue;
+        .select2-results {
+            .select2-results__options {
+                max-height: none;
+                overflow-y: hidden;
+                .select2-results__option {
+                    text-align: center;
+                    font-family: 'Montserrat';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    padding: 14px 20px 14px 20px;
+                    color: $color-white;
+                    background-color: $color-light-blue;
+                    border-top: 1px solid rgba(252, 252, 252, 0.2);
+    
+                    @include media_from('md') {
+                        font-size: 18px;
+                        padding: 14px 16px 15px 16px;
+                    }
+                }
+
+                .select2-results__option[aria-selected=true] {
+                    background-color: $color-light-blue;
+                }
+    
+                .select2-results__option.select2-results__option--highlighted {
+                    background-color: #63cdfa;
+                }
+            }
+        }
+    }
+}
+
+//Открытый селект
+.select2.select2-container.select2-container--default.select2-container--below.select2-container--open.select2-container--focus {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    .select2-selection__arrow {
+        transform: rotate(180deg);
     }
 }

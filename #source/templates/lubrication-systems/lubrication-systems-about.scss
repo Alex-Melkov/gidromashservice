@@ -29,8 +29,8 @@
         padding-right: 10px;
 
         @include media_from('sm') {
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
         }
 
         @include media_from('md') {
@@ -46,6 +46,14 @@
         @include media_from('xl') {
             padding-left: 0px;
             padding-right: 0px;
+        }
+
+        @include media_from('3xl') {
+            padding-left: 100px;
+        }
+
+        @media (min-width:2100px) {
+            padding-left: 0;
         }
     }
 }

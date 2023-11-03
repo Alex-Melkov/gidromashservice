@@ -9,13 +9,18 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    box-shadow: 10px 0 30px 0 #ccccccab;
 
-    @include media_from('lg') {
-        width: 80px;
+    @include media_from('sm') {
+        width: 50px;
         height: 100%;
         bottom: auto;
         top: 0;
         left: 0;
+    }
+
+    @include media_from('lg') {
+        width: 80px;
     }
 
     @include media_from('3xl') {
@@ -78,6 +83,15 @@
 
         &.open &__icon-4 {
             transform: rotate(60deg);
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: $color-light-blue;
+                    stroke: $color-black;
+                }
+            }
         }
     }
 }

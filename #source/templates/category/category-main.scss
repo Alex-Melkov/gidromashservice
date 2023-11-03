@@ -26,8 +26,8 @@
         padding-right: 10px;
 
         @include media_from('sm') {
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
         }
 
         @include media_from('md') {
@@ -43,6 +43,14 @@
         @include media_from('xl') {
             padding-left: 0px;
             padding-right: 0px;
+        }
+
+        @include media_from('3xl') {
+            padding-left: 100px;
+        }
+
+        @media (min-width:2100px) {
+            padding-left: 0;
         }
 
         .category-main-bread-crumbs {
@@ -68,7 +76,7 @@
             &__top-block {
                 width: 100%;
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
                 gap: 30px;
                 margin-bottom: 40px;
 
@@ -90,7 +98,8 @@
                     @include media_from('xl') {
                         width: 66%;
                     }
-                    &__text-bold {
+                    b {
+                        display: block;
                         font-size: 0.75rem;
                         font-style: normal;
                         font-weight: 500;
@@ -112,7 +121,7 @@
                         @include media_from('3xl') {
                             margin-bottom: 60px;
                         }
-                        &__title {
+                        h3 {
                             font-size: 1rem;
                             font-style: normal;
                             font-weight: 600;
@@ -128,7 +137,7 @@
                                 margin-bottom: 30px;
                             }
                         }
-                        &__list {
+                        ul {
                             display: flex;
                             flex-direction: column;
                             list-style: none;
@@ -142,7 +151,7 @@
                                gap: 20px;
                             }
 
-                            &__item {
+                            li {
                                 position: relative;
                                 list-style: none;
                                 font-size: 0.75rem;
@@ -176,7 +185,7 @@
                         }
                     }
 
-                    &__text {
+                    p {
                         font-size: 0.75rem;
                         font-style: normal;
                         font-weight: 400;
@@ -203,15 +212,14 @@
                         min-width: 600px;
                     }
                     img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                        max-width: 100%;
+                        height: auto;
                     }
                 }
             }
 
             &__bottom-block {
-                &__title {
+                h3 {
                     font-size: 1rem;
                     font-style: normal;
                     font-weight: 600;
@@ -224,44 +232,42 @@
                     }
                 }
 
-                &__list {
+                ul {
                     display: grid;
                     justify-content: center;
-                    grid-template-columns: repeat(2, minmax(140px, 180px));
+                    grid-template-columns: repeat(2, 1fr);
                     column-gap: 10px;
                     row-gap: 15px;
 
                     @include media_from('sm') {
-                        grid-template-columns: repeat(3, minmax(140px, 200px));
+                        grid-template-columns: repeat(3, 1fr);
                     }
                     @include media_from('md') {
-                        grid-template-columns: repeat(3, minmax(160px, 220px));
                         column-gap: 20px;
                         row-gap: 20px;
                     }
                     @include media_from('lg') {
-                        grid-template-columns: repeat(3, minmax(160px, 220px));
                         column-gap: 30px;
                         row-gap: 20px;
                     }
                     @include media_from('xl') {
-                        grid-template-columns: repeat(4, minmax(180px, 285px));
+                        grid-template-columns: repeat(4, 1fr);
                         justify-content: space-between;
                         column-gap: 30px;
                         row-gap: 20px;
                     }
                     @include media_from('2xl') {
-                        grid-template-columns: repeat(5, minmax(180px, 285px));
+                        grid-template-columns: repeat(5, 1fr);
                         column-gap: 30px;
                         row-gap: 30px;
                     }
                     @include media_from('3xl') {
-                        grid-template-columns: repeat(6, minmax(180px, 285px));
+                        grid-template-columns: repeat(6, 1fr);
                         column-gap: 30px;
                         row-gap: 30px;
                     }
 
-                    &__item {
+                    li {
                         list-style: none;
                         display: flex;
                         align-items: center;

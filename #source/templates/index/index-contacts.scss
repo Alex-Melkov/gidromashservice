@@ -28,8 +28,8 @@
         padding-right: 10px;
 
         @include media_from('sm') {
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
         }
 
         @include media_from('md') {
@@ -44,6 +44,11 @@
 
         @include media_from('3xl') {
             max-width: 1546px;
+            padding-left: 100px;
+        }
+
+        @media (min-width:2100px) {
+            padding-left: 0;
         }
 
         &__header {
@@ -174,17 +179,24 @@
                         }
                     }
                     &__tel {
-                        font-size: 0.92rem;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 1.2;
-
-                        @media (min-width: 390px) {
-                            font-size: 1.12rem;
-                        }
-
-                        @include media_from('lg') {
+                        a {
                             font-size: 0.92rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            color: $color-black;
+    
+                            @media (min-width: 390px) {
+                                font-size: 1.12rem;
+                            }
+    
+                            @include media_from('lg') {
+                                font-size: 0.92rem;
+                            }
+
+                            &:hover {
+                                color: $color-light-blue;
+                            }
                         }
                     }
                 }
@@ -217,17 +229,24 @@
                         }
                     }
                     &__email {
-                        font-size: 0.92rem;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 1.2;
-
-                        @media (min-width: 390px) {
-                            font-size: 1.12rem;
-                        }
-
-                        @include media_from('lg') {
+                        a {
                             font-size: 0.92rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            color: $color-black;
+    
+                            @media (min-width: 390px) {
+                                font-size: 1.12rem;
+                            }
+    
+                            @include media_from('lg') {
+                                font-size: 0.92rem;
+                            }
+
+                            &:hover {
+                                color: $color-light-blue;
+                            }
                         }
                     }
                 }

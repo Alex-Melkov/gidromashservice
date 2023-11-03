@@ -1,0 +1,6 @@
+.gear-wheel {
+    display: none;
+    @include media_from('lg') {
+        display: block;
+    }
+}

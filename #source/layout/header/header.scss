@@ -19,8 +19,8 @@
             flex-direction: row;
             justify-content: normal;
             align-items: center;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
         }
     
         @include media_from('md') {
@@ -42,6 +42,11 @@
 
         @include media_from('3xl') {
             margin: 60px auto 0 auto;
+            padding-left: 100px;
+        }
+
+        @media (min-width:2100px) {
+            padding-left: 0;
         }
 
         &__logo {
@@ -129,7 +134,7 @@
                 color: $color-white;
 
                 &:hover {
-                    color: $color-hover-link-white;
+                    color: $color-light-blue;
                 }
 
                 &.--color-black {
@@ -137,7 +142,7 @@
                 }
 
                 &.--color-black:hover {
-                    color: $color-hover-link-black;
+                    color: $color-light-blue;
                 }
             }
         }

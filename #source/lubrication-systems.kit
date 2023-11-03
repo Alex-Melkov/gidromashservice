@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/fancybox.css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css.map" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -33,56 +37,36 @@
                 </div>
                 <div class="lubrication-systems-header__container__content__wrapper">
                   <div class="lubrication-systems-header__container__content__wrapper__header">
-                    <h1
-                      class="lubrication-systems-header__container__content__wrapper__header__title"
-                    >
-                      СИСТЕМЫ СМАЗКИ “ТРИБО”
-                    </h1>
-                    <p
-                      class="lubrication-systems-header__container__content__wrapper__header__text"
-                    >
+                    <h1>СИСТЕМЫ СМАЗКИ “ТРИБО”</h1>
+                    <p>
                       Компания "ГидроМашСервис" предлагает полный спектр услуг по подбору,
                       проектированию, монтажу, а также ремонту и восстановлению автоматических
                       централизованных систем смазки.
                     </p>
                   </div>
-                  <ul
-                    class="lubrication-systems-header__container__content__wrapper__description-list"
-                  >
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                  <ul>
+                    <li>
                       Система смазки «Трибо» разработана компанией ООО «Трибо», имеющей многолетний
                       опыт работы с зарубежными системами смазки
                     </li>
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                    <li>
                       Собственное производство на территории РФ. Все компоненты системы всегда в
                       наличии на складе либо могут быть произведены в кратчайшие сроки
                     </li>
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                    <li>
                       100% контроль всей выпускаемой продукции на каждом этапе производственного
                       цикла
                     </li>
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                    <li>
                       Собственное испытательное оборудование. Все компоненты системы проходят
                       климатические испытания на работоспособность в температурном диапазоне от -60
                       до +80 градусов Цельсия
                     </li>
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                    <li>
                       Все компоненты прошли эксплуатационные испытания на действующем оборудовании
                       на горнодобывающих предприятиях РФ
                     </li>
-                    <li
-                      class="lubrication-systems-header__container__content__wrapper__description-list__item"
-                    >
+                    <li>
                       Полная взаимозаменяемость компонентов с системами смазки других производителей
                       (Lincoln, Graco, Dropsa и т.д.)
                     </li>
@@ -157,5 +141,108 @@
     <script type="text/javascript" src="js/fancybox.umd.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript">
+      (function ($) {
+        var Defaults = $.fn.select2.amd.require('select2/defaults');
+
+        $.extend(Defaults.defaults, {
+          dropdownPosition: 'auto',
+        });
+
+        var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
+
+        var _positionDropdown = AttachBody.prototype._positionDropdown;
+
+        AttachBody.prototype._positionDropdown = function () {
+          var $window = $(window);
+
+          var isCurrentlyAbove = this.$dropdown.hasClass('select2-dropdown--above');
+          var isCurrentlyBelow = this.$dropdown.hasClass('select2-dropdown--below');
+
+          var newDirection = null;
+
+          var offset = this.$container.offset();
+
+          offset.bottom = offset.top + this.$container.outerHeight(false);
+
+          var container = {
+            height: this.$container.outerHeight(false),
+          };
+
+          container.top = offset.top;
+          container.bottom = offset.top + container.height;
+
+          var dropdown = {
+            height: this.$dropdown.outerHeight(false),
+          };
+
+          var viewport = {
+            top: $window.scrollTop(),
+            bottom: $window.scrollTop() + $window.height(),
+          };
+
+          var enoughRoomAbove = viewport.top < offset.top - dropdown.height;
+          var enoughRoomBelow = viewport.bottom > offset.bottom + dropdown.height;
+
+          var css = {
+            left: offset.left,
+            top: container.bottom,
+          };
+
+          // Determine what the parent element is to use for calciulating the offset
+          var $offsetParent = this.$dropdownParent;
+
+          // For statically positoned elements, we need to get the element
+          // that is determining the offset
+          if ($offsetParent.css('position') === 'static') {
+            $offsetParent = $offsetParent.offsetParent();
+          }
+
+          var parentOffset = $offsetParent.offset();
+
+          css.top -= parentOffset.top;
+          css.left -= parentOffset.left;
+
+          var dropdownPositionOption = this.options.get('dropdownPosition');
+
+          if (dropdownPositionOption === 'above' || dropdownPositionOption === 'below') {
+            newDirection = dropdownPositionOption;
+          } else {
+            if (!isCurrentlyAbove && !isCurrentlyBelow) {
+              newDirection = 'below';
+            }
+
+            if (!enoughRoomBelow && enoughRoomAbove && !isCurrentlyAbove) {
+              newDirection = 'above';
+            } else if (!enoughRoomAbove && enoughRoomBelow && isCurrentlyAbove) {
+              newDirection = 'below';
+            }
+          }
+
+          if (newDirection == 'above' || (isCurrentlyAbove && newDirection !== 'below')) {
+            css.top = container.top - parentOffset.top - dropdown.height;
+          }
+
+          if (newDirection != null) {
+            this.$dropdown
+              .removeClass('select2-dropdown--below select2-dropdown--above')
+              .addClass('select2-dropdown--' + newDirection);
+            this.$container
+              .removeClass('select2-container--below select2-container--above')
+              .addClass('select2-container--' + newDirection);
+          }
+
+          this.$dropdownContainer.css(css);
+        };
+      })(window.jQuery);
+      $('.catalog-select').select2({
+        placeholder: 'Показать все',
+        dropdownPosition: 'below',
+        allowClear: true,
+        minimumResultsForSearch: Infinity,
+      });
+    </script>
   </body>
 </html>

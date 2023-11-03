@@ -20,16 +20,6 @@ window.addEventListener('load', function () {
     }
   });
 
-  //Скрипт открытия/закрытия каталог-селекта
-  const catalogSelect = document.querySelector('.catalog-select');
-  const catalogSelectItem = document.querySelector('.catalog-select__default');
-
-  if (catalogSelect) {
-    catalogSelectItem.addEventListener('click', function (e) {
-      catalogSelect.classList.toggle('open-select');
-    });
-  }
-
   //Инициализация свайпера Сотрудники
   const index_about_swiper = new Swiper('.index-about-swiper', {
     direction: 'horizontal',
@@ -54,16 +44,16 @@ window.addEventListener('load', function () {
         spaceBetween: 10,
         slidesPerView: 1,
       },
-      576: {
+      390: {
         spaceBetween: 10,
         slidesPerView: 2,
       },
-      991: {
-        spaceBetween: 30,
+      768: {
+        spaceBetween: 20,
         slidesPerView: 3,
       },
-      1921: {
-        spaceBetween: 30,
+      1200: {
+        spaceBetween: 20,
         slidesPerView: 4,
       },
     },
@@ -77,6 +67,9 @@ window.addEventListener('load', function () {
   const product_bottom_swiper = new Swiper('.product-bottom-swiper', {
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+      delay: 5000,
+    },
     breakpoints: {
       320: {
         spaceBetween: 10,
@@ -140,4 +133,24 @@ window.addEventListener('load', function () {
       prevEl: '.article-bottom-swiper-button-prev',
     },
   });
+
+  //Инициализация мини-карты
+  let map = document.getElementById('map');
+
+  if (map) {
+    DG.then(function () {
+      map = DG.map('map', {
+        center: [55.314204, 86.146746],
+        zoom: 17,
+      });
+      mapicon = DG.icon({
+        iconUrl: 'img/pin.svg' /* Иконка маркера */,
+        iconAnchor: [31, 63],
+        popupAnchor: [0, 20],
+        className: 'map-icon',
+        iconSize: [62, 63] /* Размер иконки */,
+      });
+      DG.marker([55.314204, 86.146746], { icon: mapicon }).addTo(map); /* Координаты маркера */
+    });
+  }
 });

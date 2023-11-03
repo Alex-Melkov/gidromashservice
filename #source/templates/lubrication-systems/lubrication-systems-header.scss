@@ -62,8 +62,8 @@
             padding-right: 10px;
 
             @include media_from('sm') {
-                padding-left: 50px;
-                padding-right: 50px;
+                padding-left: 70px;
+                padding-right: 70px;
             }
 
             @include media_from('md') {
@@ -81,6 +81,14 @@
                 padding-right: 0px;
             }
 
+            @include media_from('3xl') {
+                padding-left: 100px;
+            }
+    
+            @media (min-width:2100px) {
+                padding-left: 0;
+            }
+
             .lubrication-systems-header-bread-crumbs {
                 width: 95%;
                 position: absolute;
@@ -90,7 +98,7 @@
 
                 @include media_from('sm') {
                     top: -50px;
-                    left: 50px;
+                    left: 70px;
                 }
 
                 @include media_from('md') {
@@ -108,6 +116,11 @@
         
                 @include media_from('3xl') {
                     top: -140px;
+                    left: 100px;
+                }
+
+                @media (min-width:2100px) {
+                    left: 0;
                 }
             }
 
@@ -122,7 +135,7 @@
                 color: $color-white;
 
                 @include media_from('sm') {
-                    left: 50px;
+                    left: 70px;
                     width: 80%;
                     top: 10%;
                     transform: translateY(-10%);
@@ -142,8 +155,16 @@
                     left: 0;
                 }
 
+                @include media_from('3xl') {
+                    left: 100px;
+                }
+
+                @media (min-width:2100px) {
+                    left: 0;
+                }
+
                 &__header {
-                    &__title {
+                    h1 {
                         font-size: 2rem;
                         font-style: normal;
                         font-weight: 600;
@@ -161,7 +182,7 @@
                             margin-bottom: 40px;
                         }
                     }
-                    &__text {
+                    p {
                         font-size: 0.875rem;
                         font-style: normal;
                         font-weight: 500;
@@ -173,7 +194,7 @@
                     }
                 }
 
-                &__description-list {
+                ul {
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
@@ -185,7 +206,7 @@
                     @include media_from('3xl') {
                         gap: 25px;
                     }
-                    &__item {
+                    li {
                         position: relative;
                         list-style: none;
                         font-size: 0.75rem;

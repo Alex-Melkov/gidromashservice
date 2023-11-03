@@ -13,7 +13,7 @@
                 padding: 40px;
             }
 
-            .fancybox__content {
+            .fancybox__content.fancybox-modal-request {
                 width: 100%;
                 max-width: 838px;
                 padding: 30px 20px;
@@ -21,7 +21,7 @@
                 border-radius: 20px;
                 cursor: default;
 
-                @media (min-width:390px) {
+                @include media_from('sm') {
                     padding: 60px 30px
                 }
 
@@ -81,10 +81,11 @@
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: 1.2;
-                                    padding: 10px 6px;
+                                    padding: 10px 10px;
+                                    transition: background-color 0.3s ease;
     
                                     @include media_from('lg') {
-                                        padding: 12px 8px;
+                                        padding: 12px 10px;
                                     }
 
                                     @include media_from('2xl') {
@@ -93,6 +94,10 @@
 
                                     &::placeholder {
                                         color: $color-white;
+                                    }
+
+                                    &:focus {
+                                        background-color: #35c0fc;
                                     }
                                 }
                             }
@@ -110,10 +115,11 @@
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: 1.2;
-                                    padding: 10px 6px;
+                                    padding: 10px 10px;
+                                    transition: background-color 0.3s ease;
 
                                     @include media_from('lg') {
-                                        padding: 12px 8px;
+                                        padding: 12px 10px;
                                     }
     
                                     @include media_from('2xl') {
@@ -122,6 +128,10 @@
 
                                     &::placeholder {
                                         color: $color-white;
+                                    }
+
+                                    &:focus {
+                                        background-color: #35c0fc;
                                     }
                                 }
                             }
@@ -148,10 +158,11 @@
                                 font-size: 0.7rem;
                                 font-style: normal;
                                 font-weight: 500;
-                                padding: 10px 6px;
+                                padding: 10px 10px;
+                                transition: background-color 0.3s ease;
 
                                 @include media_from('lg') {
-                                    padding: 12px 8px;
+                                    padding: 12px 10px;
                                 }
 
                                 @include media_from('2xl') {
@@ -162,6 +173,9 @@
                                     color: $color-white;
                                 }
                                 
+                                &:focus {
+                                    background-color: #35c0fc;
+                                }
                             }
                         }
 
