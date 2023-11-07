@@ -9,7 +9,8 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
-    box-shadow: 10px 0 30px 0 #ccccccab;
+    transition: hover 0.3s ease;
+    box-shadow: 10px 0 30px -5px rgba(204, 204, 204, 0.2705882353);
 
     @include media_from('sm') {
         width: 50px;
@@ -25,6 +26,43 @@
 
     @include media_from('3xl') {
         width: 100px;
+    }
+
+    &.open {
+        box-shadow: none;
+        .menu-sidebar__btn-toggle {
+            svg {
+                path {
+                    fill: transparent;
+                    stroke: $color-black;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $color-light-blue;
+                        stroke: $color-light-blue;
+                    }
+                }
+            }
+
+            &__icon-1 {
+                transform: rotate(60deg);
+            }
+
+            &__icon-2 {
+                transform: rotate(-60deg);
+            }
+
+            &__icon-3 {
+                transform: rotate(-60deg);
+            }
+
+            &__icon-4 {
+                transform: rotate(60deg);
+            }
+        }
     }
 
     &__btn-toggle {
@@ -63,33 +101,11 @@
             }
         }
 
-        &.open svg {
-            path {
-                fill: transparent;
-                stroke: $color-black;
-            }
-        }
-        &.open &__icon-1 {
-            transform: rotate(60deg);
-        }
-
-        &.open &__icon-2 {
-            transform: rotate(-60deg);
-        }
-
-        &.open &__icon-3 {
-            transform: rotate(-60deg);
-        }
-
-        &.open &__icon-4 {
-            transform: rotate(60deg);
-        }
-
         &:hover {
             svg {
                 path {
                     fill: $color-light-blue;
-                    stroke: $color-black;
+                    stroke: $color-light-blue;
                 }
             }
         }

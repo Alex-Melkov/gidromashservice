@@ -60,6 +60,10 @@
                 top: 30%;
                 transform: translateY(-30%);
             }
+
+            @include media_from('xl') {
+                left: 15%;
+            }
     
             @include media_from('3xl') {
                 display: none;
@@ -95,17 +99,17 @@
 
             @include media_from('sm') {
                 padding-left: 70px;
-                padding-right: 70px;
+                padding-right: 20px;
             }
 
             @include media_from('md') {
                 padding-left: 100px;
-                padding-right: 100px;
+                padding-right: 50px;
             }
         
             @include media_from('lg') {
                 padding-left: 135px;
-                padding-right: 135px;
+                padding-right: 55px;
             }
     
             @include media_from('xl') {
@@ -146,7 +150,7 @@
                 }
 
                 @include media_from('xl') {
-                    left: 0;
+                    left: 80px;
                 }
 
                 @include media_from('3xl') {

@@ -26,7 +26,7 @@
         height: 380px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 0 auto;
         padding-left: 10px;
         padding-right: 10px;
@@ -34,24 +34,25 @@
         @include media_from('sm') {
             height: 347px;
             padding-left: 70px;
-            padding-right: 70px;
+            padding-right: 20px;
+            justify-content: space-between;
             align-items: center;
         }
 
         @include media_from('md') {
             padding-left: 100px;
-            padding-right: 100px;
+            padding-right: 50px;
         }
     
         @include media_from('lg') {
             height: 434px;
             padding-left: 135px;
-            padding-right: 135px;
+            padding-right: 55px;
         }
 
         @include media_from('2xl') {
             height: 134px;
-            padding-left: 0px;
+            padding-left: 80px;
             padding-right: 0px;
             flex-direction: row;
             align-items: normal;

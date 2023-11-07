@@ -4,21 +4,34 @@ window.addEventListener('load', function () {
   const menu = document.querySelector('.menu-wrapper');
   const menuSideBar = document.querySelector('.menu-sidebar');
   const btnToggle = document.querySelector('.menu-sidebar__btn-toggle');
-  const lockPaddingValue = window.innerWidth - menuSideBar.offsetWidth + 'px';
 
-  btnToggle.addEventListener('click', function (e) {
-    menu.classList.toggle('open');
-    body.classList.toggle('lock');
-    btnToggle.classList.toggle('open');
+  //Если ширина экрана меньше 575px
+  const mobileWidthMediaQuery = window.matchMedia('(max-width: 575px)');
 
-    if (window.innerWidth < 991) {
+  //Функция добавляет/удаляет справа паддинг
+  function addPadding(isMobileSize, lockPaddingValue) {
+    if (isMobileSize) {
       if (menu.classList.contains('open')) {
         menuSideBar.style.paddingRight = lockPaddingValue;
       } else {
         menuSideBar.style.paddingRight = '0px';
       }
     }
+  }
+
+  //Слушаем изменение ширины экрана
+  mobileWidthMediaQuery.addEventListener('change', function (event) {
+    addPadding(event.matches, (lockPaddingValue = 0));
   });
+
+  btnToggle.addEventListener('click', function (e) {
+    let lockPaddingValue = window.innerWidth - menuSideBar.offsetWidth + 'px';
+    body.classList.toggle('lock');
+    menu.classList.toggle('open');
+    menuSideBar.classList.toggle('open');
+    addPadding(mobileWidthMediaQuery.matches, lockPaddingValue);
+  });
+  //=====================================================================
 
   //Инициализация свайпера Сотрудники
   const index_about_swiper = new Swiper('.index-about-swiper', {
@@ -34,6 +47,7 @@ window.addEventListener('load', function () {
       clickable: true,
     },
   });
+  //=====================================================================
 
   //Инициализация свайпера Партнёры
   const partners_swiper = new Swiper('.partners-swiper', {
@@ -62,6 +76,7 @@ window.addEventListener('load', function () {
       prevEl: '.partners-swiper-button-prev',
     },
   });
+  //=====================================================================
 
   //Инициализация свайпера Смотрите также
   const product_bottom_swiper = new Swiper('.product-bottom-swiper', {
@@ -105,6 +120,7 @@ window.addEventListener('load', function () {
       prevEl: '.product-bottom-swiper-button-prev',
     },
   });
+  //=====================================================================
 
   //Инициализация свайпера Другие статьи
   const article_bottom_swiper = new Swiper('.article-bottom-swiper', {
@@ -133,6 +149,7 @@ window.addEventListener('load', function () {
       prevEl: '.article-bottom-swiper-button-prev',
     },
   });
+  //=====================================================================
 
   //Инициализация мини-карты
   let map = document.getElementById('map');
@@ -140,7 +157,7 @@ window.addEventListener('load', function () {
   if (map) {
     DG.then(function () {
       map = DG.map('map', {
-        center: [55.314204, 86.146746],
+        center: [55.314218, 86.146675],
         zoom: 17,
       });
       mapicon = DG.icon({
@@ -150,7 +167,7 @@ window.addEventListener('load', function () {
         className: 'map-icon',
         iconSize: [62, 63] /* Размер иконки */,
       });
-      DG.marker([55.314204, 86.146746], { icon: mapicon }).addTo(map); /* Координаты маркера */
+      DG.marker([55.314218, 86.146675], { icon: mapicon }).addTo(map); /* Координаты маркера */
     });
   }
 });

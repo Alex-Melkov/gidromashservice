@@ -20,24 +20,24 @@
             justify-content: normal;
             align-items: center;
             padding-left: 70px;
-            padding-right: 70px;
+            padding-right: 20px;
         }
     
         @include media_from('md') {
             padding-left: 100px;
-            padding-right: 100px;
+            padding-right: 50px;
         }
     
         @include media_from('lg') {
             padding-left: 135px;
-            padding-right: 135px;
+            padding-right: 55px;
             height: 90px;
             margin: 40px auto 0 auto;
         }
 
         @include media_from('xl') {
-            padding-left: 0px;
-            padding-right: 0px;
+            padding-left: 80px;
+            padding-right: 0px;;
         }
 
         @include media_from('3xl') {
